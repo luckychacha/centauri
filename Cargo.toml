@@ -68,7 +68,7 @@ sp-consensus-slots = { git = "https://github.com/paritytech//substrate.git", bra
 sp-consensus-aura = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
 sp-debug-derive = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
 sp-externalities = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
-sp-io = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
+sp-io = { version = "7.0.0", git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
 sp-keyring = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
 sp-keystore = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }
 sp-panic-handler = { git = "https://github.com/paritytech//substrate.git", branch = "polkadot-v0.9.40" }

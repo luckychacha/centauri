@@ -3,7 +3,10 @@ name = "hyperspace-primitives"
 version = "0.1.0"
 edition = "2021"
 description = "Shared primtives for hyperspace based crates"
-authors = ["Seun Lanlege <seunlanlege@gmail.com>", "David Salami <wizdave97@gmail.com>"]
+authors = [
+    "Seun Lanlege <seunlanlege@gmail.com>",
+    "David Salami <wizdave97@gmail.com>",
+]
 
 [dependencies]
 # crates.io
@@ -11,7 +14,9 @@ anyhow = "1.0.65"
 futures = "0.3.21"
 async-trait = "0.1.53"
 hex = "0.4.3"
-codec = { package = "parity-scale-codec", version = "3.0.0", features = ["derive"] }
+codec = { package = "parity-scale-codec", version = "3.0.0", features = [
+    "derive",
+] }
 tokio = { version = "1.19.2", features = ["macros", "sync", "time"] }
 thiserror = "1.0.31"
 log = "0.4.17"
@@ -19,7 +24,8 @@ rand = "0.8.5"
 serde = "1.0.163"
 
 # substrate
-subxt = { git = "https://github.com/paritytech/subxt",  rev = "2a4da618a033bb82f768e4ef67b093b371f8b492", features = ["substrate-compat"] }
+# subxt = { git = "https://github.com/paritytech/subxt",  rev = "2a4da618a033bb82f768e4ef67b093b371f8b492", features = ["substrate-compat"] }
+subxt = { version = "0.29.0", git = "https://github.com/paritytech/subxt", tag = "v0.29.0", default-features = false }
 
 # ibc
 ibc = { path = "../../ibc/modules", features = [] }

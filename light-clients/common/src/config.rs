@@ -28,7 +28,7 @@ use subxt::{
 		frame_metadata::{StorageEntryType, StorageHasher},
 		scale_decode::DecodeAsType,
 		scale_encode::{EncodeAsFields, EncodeAsType},
-		sp_runtime::{scale_info::TypeDef, Either},
+		// sp_runtime::{scale_info::TypeDef, Either},
 	},
 	metadata::{DecodeWithMetadata, EncodeWithMetadata, Metadata},
 	storage::{
@@ -38,6 +38,7 @@ use subxt::{
 	tx::Payload,
 	utils::Static,
 };
+use sp_runtime::{scale_info::TypeDef, Either};
 
 /// This represents a statically generated storage lookup address.
 pub struct LocalAddress<StorageKey, ReturnTy, Fetchable, Defaultable, Iterable> {

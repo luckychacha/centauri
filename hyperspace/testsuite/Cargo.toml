@@ -18,9 +18,8 @@ json = { version = "1.0.85", package = "serde_json" }
 codec = { package = "parity-scale-codec", version = "3.0.0", features = [
     "derive",
 ] }
-subxt = { git = "https://github.com/paritytech/subxt", rev = "2a4da618a033bb82f768e4ef67b093b371f8b492", features = [
-    "substrate-compat",
-] }
+subxt = { version = "0.29.0", git = "https://github.com/paritytech/subxt", tag = "v0.29.0", default-features = false }
+
 
 ibc = { path = "../../ibc/modules" }
 ibc-proto = { path = "../../ibc/proto" }
@@ -55,9 +54,8 @@ rand = "0.8.5"
 toml = "0.7.4"
 
 [dev-dependencies]
-subxt = { git = "https://github.com/paritytech/subxt", rev = "2a4da618a033bb82f768e4ef67b093b371f8b492", features = [
-    "substrate-compat",
-] }
+subxt = { version = "0.29.0", git = "https://github.com/paritytech/subxt", tag = "v0.29.0", default-features = false }
+
 hyperspace-core = { path = "../core", features = [
     "testing",
     "build-metadata-from-ws",

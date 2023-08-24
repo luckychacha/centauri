@@ -8,9 +8,8 @@ authors = ["Seun Lanlege <seunlanlege@gmail.com>"]
 hex = "0.4.3"
 anyhow = "1.0.64"
 serde = "1.0.144"
-subxt = { git = "https://github.com/paritytech/subxt", rev = "2a4da618a033bb82f768e4ef67b093b371f8b492", features = [
-    "substrate-compat",
-] }
+subxt = { version = "0.29.0", git = "https://github.com/paritytech/subxt", tag = "v0.29.0", default-features = false }
+
 codec = { package = "parity-scale-codec", version = "3.0.0", features = [
     "derive",
 ] }
