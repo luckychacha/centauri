@@ -20,8 +20,8 @@
 #![deny(missing_docs)]
 
 pub mod error;
-use beefy_primitives::mmr::MmrLeafVersion;
-pub use beefy_primitives::mmr::{BeefyNextAuthoritySet, MmrLeaf};
+use sp_consensus_beefy::mmr::MmrLeafVersion;
+pub use sp_consensus_beefy::mmr::{BeefyNextAuthoritySet, MmrLeaf};
 use codec::{Decode, Encode};
 use core::marker::PhantomData;
 use sp_core::H256;
@@ -72,7 +72,7 @@ pub struct SignatureWithAuthorityIndex {
 /// Signed commitment
 pub struct SignedCommitment {
 	/// Commitment
-	pub commitment: beefy_primitives::Commitment<u32>,
+	pub commitment: sp_consensus_beefy::Commitment<u32>,
 	/// Signatures for this commitment
 	pub signatures: Vec<SignatureWithAuthorityIndex>,
 }

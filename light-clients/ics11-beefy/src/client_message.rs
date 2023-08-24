@@ -31,7 +31,7 @@ use beefy_light_client_primitives::{
 	BeefyNextAuthoritySet, Hash, MmrUpdateProof, PartialMmrLeaf, SignatureWithAuthorityIndex,
 	SignedCommitment,
 };
-use beefy_primitives::{
+use sp_consensus_beefy::{
 	known_payloads::MMR_ROOT_ID,
 	mmr::{MmrLeaf, MmrLeafVersion},
 	Commitment, Payload,

@@ -25,7 +25,7 @@ use crate::{
 	},
 };
 use beefy_light_client_primitives::{EncodedVersionedFinalityProof, NodesUtils, PartialMmrLeaf};
-use beefy_primitives::VersionedFinalityProof;
+use sp_consensus_beefy::VersionedFinalityProof;
 use beefy_prover::{
 	helpers::{fetch_timestamp_extrinsic_with_proof, TimeStampExtWithProof},
 	Prover,
@@ -191,7 +191,7 @@ async fn test_continuous_update_of_beefy_client() {
 	{
 		let beefy_version_finality_proof: VersionedFinalityProof<
 			u32,
-			beefy_primitives::crypto::Signature,
+			sp_consensus_beefy::crypto::Signature,
 		> = codec::Decode::decode(&mut &*encoded_versioned_finality_proof.0 .0).unwrap();
 
 		let signed_commitment = match beefy_version_finality_proof {

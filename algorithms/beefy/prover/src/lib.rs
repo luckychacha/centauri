@@ -28,7 +28,7 @@ pub mod relay_chain_queries;
 use beefy_light_client_primitives::{
 	ClientState, HostFunctions, MmrUpdateProof, ParachainHeader, PartialMmrLeaf,
 };
-use beefy_primitives::mmr::{BeefyNextAuthoritySet, MmrLeaf};
+use sp_consensus_beefy::mmr::{BeefyNextAuthoritySet, MmrLeaf};
 use codec::Decode;
 use error::Error;
 use helpers::{
@@ -298,9 +298,9 @@ where
 	/// mmr root hash.
 	pub async fn fetch_mmr_update_proof_for(
 		&self,
-		_signed_commitment: beefy_primitives::SignedCommitment<
+		_signed_commitment: sp_consensus_beefy::SignedCommitment<
 			u32,
-			beefy_primitives::crypto::Signature,
+			sp_consensus_beefy::crypto::Signature,
 		>,
 	) -> Result<MmrUpdateProof, Error> {
 		todo!("fetch beefy authorities")

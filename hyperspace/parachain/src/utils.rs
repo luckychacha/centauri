@@ -14,7 +14,7 @@
 
 use crate::Error;
 use beefy_light_client_primitives::{ClientState, MmrUpdateProof};
-use beefy_primitives::known_payloads::MMR_ROOT_ID;
+use sp_consensus_beefy::known_payloads::MMR_ROOT_ID;
 use beefy_prover::helpers::unsafe_arc_cast;
 use codec::Decode;
 use frame_support::pallet_prelude::{DispatchClass, Weight};

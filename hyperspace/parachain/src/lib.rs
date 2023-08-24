@@ -391,9 +391,9 @@ where
 	/// Queries for the BEEFY mmr update proof for the given signed commitment height.
 	pub async fn query_beefy_mmr_update_proof(
 		&self,
-		signed_commitment: beefy_primitives::SignedCommitment<
+		signed_commitment: sp_consensus_beefy::SignedCommitment<
 			u32,
-			beefy_primitives::crypto::Signature,
+			sp_consensus_beefy::crypto::Signature,
 		>,
 	) -> Result<MmrUpdateProof, Error> {
 		let prover = Prover {

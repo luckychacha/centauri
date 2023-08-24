@@ -15,7 +15,7 @@
 use super::{error::Error, signer::ExtrinsicSigner, ParachainClient};
 use crate::{parachain::UncheckedExtrinsic, provider::TransactionId, FinalityProtocol};
 use anyhow::anyhow;
-use beefy_gadget_rpc::BeefyApiClient;
+use sc_consensus_beefy_rpc::BeefyApiClient;
 use codec::{Decode, Encode};
 use finality_grandpa::BlockNumberOps;
 use finality_grandpa_rpc::GrandpaApiClient;
@@ -69,7 +69,7 @@ type GrandpaJustification = grandpa_light_client_primitives::justification::Gran
 >;
 
 type BeefyJustification =
-	beefy_primitives::SignedCommitment<u32, beefy_primitives::crypto::Signature>;
+	sp_consensus_beefy::SignedCommitment<u32, sp_consensus_beefy::crypto::Signature>;
 
 /// An encoded justification proving that the given header has been finalized
 #[derive(Clone, serde::Serialize, serde::Deserialize)]

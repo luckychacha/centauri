@@ -14,7 +14,7 @@
 // limitations under the License.
 
 use alloc::string::ToString;
-use beefy_primitives::{known_payloads::MMR_ROOT_ID, mmr::BeefyNextAuthoritySet};
+use sp_consensus_beefy::{known_payloads::MMR_ROOT_ID, mmr::BeefyNextAuthoritySet};
 use codec::{Decode, Encode};
 use core::{convert::TryFrom, fmt::Debug, marker::PhantomData, time::Duration};
 use ibc::prelude::*;
